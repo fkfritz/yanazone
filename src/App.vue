@@ -1,44 +1,40 @@
 <script setup lang="ts">
-import TheHeader from "@/components/TheHeader.vue";
-import TheCart from "@/components/cart/TheCart.vue";
-import TheShop from "@/components/shop/TheShop.vue";
-import TheFooter from "@/components/TheFooter.vue";
+import TheHeader from '@/components/TheHeader.vue'
+import TheCart from '@/components/cart/TheCart.vue'
+import TheShop from '@/components/shop/TheShop.vue'
+import TheFooter from '@/components/TheFooter.vue'
 </script>
 
 <template>
-  <div class="app-container">
-    <TheHeader class="header" />
-    <TheShop class="shop b2" />
-    <TheCart class="cart b3" />
+  <div class="app-container d-flex flex-column">
+    <TheHeader class="header b1" />
+    <div class="mt-70 d-flex flex-row">
+      <TheShop class="shop" />
+      <TheCart class="cart b3" />
+    </div>
     <TheFooter class="footer b4" />
   </div>
 </template>
 
-<style>
-@import "./assets/base.scss";
-@import "./assets/debug.scss";
+<style lang="scss">
+@import './assets/base.scss';
+@import './assets/debug.scss';
 
-.app-container {
-  min-height: 100vh;
-  display: grid;
-  grid-template-areas: "header header" "shop cart" "footer footer";
-  grid-template-columns: 75% 25%;
-  grid-template-rows: 70px auto 60px;
-}
-
-.header {
-  grid-area: header;
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
 }
 
 .shop {
-  grid-area: shop;
+  width: 75%;
 }
 
 .cart {
-  grid-area: cart;
+  width: 25%;
 }
 
-.footer {
-  grid-area: footer;
+footer {
+  height: 60px;
 }
 </style>
