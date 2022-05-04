@@ -7,7 +7,7 @@ import TheFooter from "@/components/TheFooter.vue";
 
 <template>
   <div class="app-container">
-    <TheHeader class="header b1" />
+    <TheHeader class="header" />
     <TheShop class="shop b2" />
     <TheCart class="cart b3" />
     <TheFooter class="footer b4" />
